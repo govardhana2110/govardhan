@@ -30,26 +30,6 @@ Customer is central to Novodhi’s success and we bring "Novodhi" to every one o
 
 <p> Novodhi’s vision is to be a top business solutions provider in Insurance, Healthcare & Financial Services Industry through its Innovative Intelligence Solutions.</p>
 </div>
-<!-- <label>Country</label>
-<div  title="Please select the country that the customer will primarily be served from">
-    <select placeholder="Phantasyland" (change)="changeCountry($event.target.value)">
-        <option *ngFor ="let count of countryList">{{count.name}} </option>
-    </select>
-</div>
-
-
-<label>City</label>
-<div title="Please select the city that the customer is primarily to be served from.">
-    <select placeholder="Anycity" >
-        <option *ngFor ="let city of cities">{{city}} </option>
-  </select>
-</div>
-<label>abc</label>
-<div title="Please select the city that the customer is primarily to be served from.">
-    <select placeholder="Anycity">
-        <option *ngFor ="let xyz of abc">{{abc}} </option>
-  </select>
-</div> -->
 
 </div>
 </div>
@@ -57,14 +37,6 @@ Customer is central to Novodhi’s success and we bring "Novodhi" to every one o
 
 
 <div *ngIf="flag"  class="img-responsive image-resize">
-
-
-
-
-
-
-
-
 
   <div class="container text-center">
     <div class="row">
@@ -81,14 +53,10 @@ Customer is central to Novodhi’s success and we bring "Novodhi" to every one o
   <br>
   <br>
 
-    <!-- <button mat-button (click)="openDialog('Add',{})" mat-flat-button color="primary">Add Row</button> -->
 
     <table mat-table [dataSource]="filtered"  class="class" >
 
-      <!--- Note that these columns can be defined in any order.
-          The actual rendered columns are set as a property on the row definition" -->
 
-      <!-- Id Column -->
       <ng-container matColumnDef="id">
         <th mat-header-cell *matHeaderCellDef style="text-align: center;"> ID. </th>
         <td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.id}} </td>
@@ -116,9 +84,9 @@ Customer is central to Novodhi’s success and we bring "Novodhi" to every one o
       <ng-container matColumnDef="action">
         <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Action </th>
         <td mat-cell *matCellDef="let element" class="action-link">
-          <!-- <a (click)="openDialog('Update',element)">Edit</a> | -->
+
           <button color="success" mat-icon-button (click)="openDialog('Update',element)" ><mat-icon matTooltip="Edit" color="primary">edit</mat-icon></button>&nbsp;
-          <!-- <a (click)="openDialog('Delete',element)">Delete</a> -->
+
           <button mat-icon-button ><mat-icon matTooltip="Clone" color="accent">file_copy</mat-icon></button>
           <button mat-icon-button (click)="openview('Update',element)"><mat-icon matTooltip="View" >view_headline</mat-icon></button>
           <button   mat-icon-button (click)="openDialog('Delete',element)"><mat-icon matTooltip="Delete" color="warn">delete</mat-icon></button>
@@ -149,14 +117,11 @@ Customer is central to Novodhi’s success and we bring "Novodhi" to every one o
   <br>
   <br>
 
-    <!-- <button mat-button (click)="openDialog('Add',{})" mat-flat-button color="primary">Add Row</button> -->
+
 
     <table mat-table [dataSource]="filtered1"  class="class" >
 
-      <!--- Note that these columns can be defined in any order.
-          The actual rendered columns are set as a property on the row definition" -->
 
-      <!-- Id Column -->
       <ng-container matColumnDef="id">
         <th mat-header-cell *matHeaderCellDef style="text-align: center;"> ID. </th>
         <td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.id}} </td>
@@ -184,9 +149,8 @@ Customer is central to Novodhi’s success and we bring "Novodhi" to every one o
       <ng-container matColumnDef="action">
         <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Action </th>
         <td mat-cell *matCellDef="let element" class="action-link">
-          <!-- <a (click)="openDialog('Update',element)">Edit</a> | -->
+
           <button color="success" mat-icon-button (click)="openDialog1('Update',element)" ><mat-icon matTooltip="Edit" color="primary">edit</mat-icon></button>&nbsp;
-          <!-- <a (click)="openDialog('Delete',element)">Delete</a> -->
           <button mat-icon-button ><mat-icon matTooltip="Clone" color="accent">file_copy</mat-icon></button>
           <button mat-icon-button (click)="openview('Update',element)"><mat-icon matTooltip="View" >view_headline</mat-icon></button>
           <button mat-icon-button (click)="openDialog1('Delete',element)"><mat-icon matTooltip="Delete" color="warn">delete</mat-icon></button>
@@ -218,14 +182,12 @@ Customer is central to Novodhi’s success and we bring "Novodhi" to every one o
   <br>
   <br>
 
-    <!-- <button mat-button (click)="openDialog('Add',{})" mat-flat-button color="primary">Add Row</button> -->
+
 
     <table mat-table [dataSource]="filtered2"  class="class" >
 
-      <!--- Note that these columns can be defined in any order.
-          The actual rendered columns are set as a property on the row definition" -->
 
-      <!-- Id Column -->
+
       <ng-container matColumnDef="id">
         <th mat-header-cell *matHeaderCellDef style="text-align: center;"> ID. </th>
         <td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.id}} </td>
@@ -253,9 +215,9 @@ Customer is central to Novodhi’s success and we bring "Novodhi" to every one o
       <ng-container matColumnDef="action">
         <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Action </th>
         <td mat-cell *matCellDef="let element" class="action-link">
-          <!-- <a (click)="openDialog('Update',element)">Edit</a> | -->
+
           <button color="success" mat-icon-button (click)="openDialog2('Update',element)" ><mat-icon matTooltip="Edit" color="primary">edit</mat-icon></button>&nbsp;
-          <!-- <a (click)="openDialog('Delete',element)">Delete</a> -->
+
           <button mat-icon-button ><mat-icon matTooltip="Clone" color="accent">file_copy</mat-icon></button>
           <button mat-icon-button (click)="openview('Update',element)"><mat-icon matTooltip="View" >view_headline</mat-icon></button>
           <button   mat-icon-button (click)="openDialog2('Delete',element)"><mat-icon matTooltip="Delete" color="warn">delete</mat-icon></button>
@@ -271,7 +233,7 @@ Customer is central to Novodhi’s success and we bring "Novodhi" to every one o
 
 
 </div>
-<!-- <img src="./assets/images/img1.jpg" class="image-resize"> -->
+
 </div>
 
 

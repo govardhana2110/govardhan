@@ -4,9 +4,8 @@ import { MatTable } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogBoxComponent } from '../dialog-box/dialog-box.component';
 import { ViewComponent } from '../view/view.component';
-import {MatTableDataSource} from '@angular/material/table';
-import { FormControl,FormControlName,FormGroup,FormBuilder } from "@angular/forms";
-import { of, Observable } from 'rxjs'
+import { FormGroup,FormBuilder } from "@angular/forms";
+import {  Observable } from 'rxjs'
 import { DETAILS } from './details';
 
 interface Details {
@@ -101,30 +100,16 @@ export class ExperimentComponent  {
 myimage:string="assets/images/img1.jpg"
   displayedColumns: string[] = ['id', 'name','catagory','data_type','last_updated', 'action'];
   dataSource = ELEMENT_DATA;
-  // displayedColumnsc: string[] = ['id', 'name','catagory','data_type','last_updated', 'action'];
-  // dataSourcec = new MatTableDataSource(ELEMENT_DATA);
+
   displayedColumns1: string[] = ['id', 'name','catagory','data_type','last_updated', 'action'];
   dataSource1 = ELEMENT_DATA1;
   displayedColumns2: string[] = ['id', 'name','catagory','data_type','last_updated', 'action'];
   dataSource2 = ELEMENT_DATA2;
-  applyFilter(filterValue:string) {
-    // const filterValue = (event.target as HTMLInputElement).value;
-  //  this.dataSource.filter = filterValue.trim().toLowerCase();
-  }
+
   @ViewChild(MatTable,{static:true}) table: MatTable<any>;
   constructor(public dialog: MatDialog,private formBuilder: FormBuilder) {
 
-    // this.formGroup = formBuilder.group({ filter: [''] });
 
-    // this.foods$ = this.getFoods();
-
-    // this.filteredFoods$ = this.formGroup.get('filter').valueChanges.pipe(
-    //   startWith(''),
-    //   withLatestFrom(this.foods$),
-    //   map(([val, foods]) =>
-    //     !val ? foods : foods.filter((x) => x.name.toLowerCase().includes(val))
-    //   )
-    // );
 
    }
 flag:boolean=false;
@@ -140,12 +125,6 @@ countryList: Array<any> = [
 ];
 cities: Array<any>;
 abc:Array<any>;
-
-
-
-
-
-
   openDialog(action,obj) {
     obj.action = action;
     const dialogRef = this.dialog.open(DialogBoxComponent, {
@@ -354,10 +333,7 @@ changeCountry(count) {
   this.cities = this.countryList.find(con => con.name == count).cities;
   this.abc=this.countryList.find(xyz=>xyz.name==count).abc;
 }
-// changecity(count) {
-//   // this.cities = this.countryList.find(con => con.name == count).cities;
-//   this.abc=this.countryList.find(xyz=>xyz.name==count).abc;
-// }
+
 ngOnInit() {
   this.onFilterChange();
   this.onFilterChange1();
