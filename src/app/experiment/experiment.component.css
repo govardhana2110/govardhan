@@ -1,0 +1,29 @@
+
+table {
+  width: 70%;
+  position:absolute;
+}
+.image-resize{
+  background: url('../../assets/images/img4.jpg') no-repeat center center fixed;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+
+
+  height: 650px;
+  width: 1530px;
+}
+.image{
+  background-image: url('../../assets/images/img5.jpg');
+  height: 650px;
+  width: 1530px;
+}
+.color{
+ color: white;
+}
+.class1{
+  color: rgb(26, 115, 138);
+}
+
+
