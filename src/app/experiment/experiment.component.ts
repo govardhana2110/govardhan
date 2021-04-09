@@ -8,7 +8,7 @@ import {MatTableDataSource} from '@angular/material/table';
 import { FormControl,FormControlName,FormGroup,FormBuilder } from "@angular/forms";
 import { of, Observable } from 'rxjs'
 import { DETAILS } from './details';
-import { DialogBox1Component } from '../dialog-box1/dialog-box1.component';
+
 interface Details {
   id: any;
   name: string;
